@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  Location.swift
 //  Journal
 //
 //  Created by Alexander Swanson on 2/13/20.
@@ -9,10 +9,13 @@
 import SwiftUI
 import CoreData
 
-extension Event {
+extension Location {
     static func create(in managedObjectContext: NSManagedObjectContext){
-        let newEvent = self.init(context: managedObjectContext)
-        newEvent.timestamp = Date()
+        let newLocation = self.init(context: managedObjectContext)
+        
+        // Implement creation
+        newLocation.latitude = 0
+        newLocation.longitude = 0
         
         do {
             try  managedObjectContext.save()
@@ -22,12 +25,12 @@ extension Event {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
-    }   
+    }
 }
 
-extension Collection where Element == Event, Index == Int {
+extension Collection where Element == Location, Index == Int {
     func delete(at indices: IndexSet, from managedObjectContext: NSManagedObjectContext) {
-        indices.forEach { managedObjectContext.delete(self[$0]) }       
+        indices.forEach { managedObjectContext.delete(self[$0]) }
  
         do {
             try managedObjectContext.save()

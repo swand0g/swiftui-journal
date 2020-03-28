@@ -12,10 +12,21 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    public var db_journal_entry: JournalEntry {
+        let journal_entry = JournalEntry(context: persistentContainer.viewContext)
+        journal_entry.title = "A journal entry"
+        journal_entry.content = "Some journal content"
+        journal_entry.timestamp = Date()
+        let location = Location(context: persistentContainer.viewContext)
+        location.latitude = 0
+        location.longitude = 0
+        journal_entry.location = location
+        return journal_entry
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
