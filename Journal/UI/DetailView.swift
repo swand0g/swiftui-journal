@@ -8,24 +8,20 @@
 
 import SwiftUI
 
-private let dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = .medium
-    dateFormatter.timeStyle = .medium
-    return dateFormatter
-}()
-
 struct DetailView: View {
     
     @ObservedObject var journalEntry : JournalEntry
     
     var body: some View {
-        NavigationView {
-            VStack {
+
+        VStack {
+            if journalEntry.timestamp != nil {
                 Text("\(journalEntry.timestamp!, formatter: dateFormatter)")
+            } else {
+                EmptyView()
             }
-            .navigationBarTitle(Text(journalEntry.title!), displayMode: .inline)
-        }
+        }.navigationBarTitle("\(journalEntry.title ?? "")")
+    
     }
     
 }

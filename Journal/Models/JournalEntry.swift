@@ -14,7 +14,7 @@ extension JournalEntry: Identifiable {
         let newJournalEntry = self.init(context: managedObjectContext)
         newJournalEntry.timestamp = Date()
         newJournalEntry.content = content
-        newJournalEntry.title = "Default title"
+        newJournalEntry.title = "An example title"
         
         do {
             try  managedObjectContext.save()

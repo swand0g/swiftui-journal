@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-private let dateFormatter: DateFormatter = {
+public let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .medium
     dateFormatter.timeStyle = .medium
@@ -46,7 +46,7 @@ struct MasterView: View {
                 // Edit Button
                 leading:
                     EditButton(),
-                // Add Button
+                // Button to add a new journal entry
                 trailing:
                     Button(action: {withAnimation {self.showJournalEntryCreationView = true}}) {
                         Image(systemName: "pencil.circle")
