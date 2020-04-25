@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TextView: UIViewRepresentable {
+    
     @Binding var text: String
 
     func makeUIView(context: Context) -> UITextView {
@@ -23,6 +24,7 @@ struct TextView: UIViewRepresentable {
     func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.text = text
     }
+    
 }
 
 struct TextView_Previews: PreviewProvider {
