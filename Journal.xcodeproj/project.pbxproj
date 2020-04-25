@@ -63,6 +63,7 @@
 		1473DAD823F5F9470039B7B4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1473DADC23F602220039B7B4 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		1473DADE23F602770039B7B4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		14E680382454DBD70007F1B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		1473DA8D23F5F6180039B7B4 = {
 			isa = PBXGroup;
 			children = (
+				14E680382454DBD70007F1B9 /* README.md */,
 				1473DA9823F5F6180039B7B4 /* Journal */,
 				1473DAB423F5F61A0039B7B4 /* JournalTests */,
 				1473DABF23F5F61A0039B7B4 /* JournalUITests */,
