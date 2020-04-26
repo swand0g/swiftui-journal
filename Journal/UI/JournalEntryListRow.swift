@@ -15,25 +15,26 @@ struct JournalEntryListRow: View {
     
     @ViewBuilder
     var body: some View {
-        
         NavigationLink(
             destination: DetailView(journalEntry: journalEntry)
         ) {
             HStack {
                 
-                // Define pic view if the pic exists in the journal entry
-                if journalEntry.image != nil {
-                    PicView(image: journalEntry.image!)
-                } else {
-                    EmptyView()
+                if journalEntry.title != nil && journalEntry.timestamp != nil {
+                    
+                    if journalEntry.title!.count > 0 {
+                        Text("\(journalEntry.title!)")
+                        Text("\(journalEntry.timestamp!, formatter: shortDateFormatter)")
+                            .font(.caption)
+                            .foregroundColor(Color.gray)
+                    } else {
+                        Text("\(journalEntry.timestamp!, formatter: mediumDateFormatter)")
+                    }
+                    
                 }
-
-                // Journal entry info
-                Text("\(journalEntry.title!)")
                 
             }
         }
-        
     }
     
 }
@@ -56,12 +57,4 @@ struct PicView: View {
     }
     
     
-}
-
-struct JournalEntryListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        let journalEntry = (UIApplication.shared.delegate as! AppDelegate).db_journal_entry
-        journalEntry.image = UIImage(named: "sample-pic")?.pngData()
-        return JournalEntryListRow(journalEntry: journalEntry)
-    }
 }

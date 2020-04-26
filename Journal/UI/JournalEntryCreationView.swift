@@ -13,20 +13,20 @@ struct JournalEntryCreationView: View {
         
     var viewContext: NSManagedObjectContext
     
+    @State var input: String = ""
+    
+    @State var title: String = ""
+    
     @Binding
     var showThis: Bool
-    
-    var text: String =
-    """
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    """
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
+                TextField("Write it down here...", text: $input)
+                Divider()
+                TextField("Add a title?", text: $title)
                 Spacer()
-                TextView(text: .constant(text))
-                .padding()
             }
             .padding(.horizontal, 15)
             .navigationBarTitle("What's new?")
@@ -38,13 +38,12 @@ struct JournalEntryCreationView: View {
                 },
                 trailing:
                 Button("Save") {
-                    withAnimation { JournalEntry.create(in: self.viewContext, with: self.text) }
+                    withAnimation { JournalEntry.create(in: self.viewContext, withTitle: self.title, withContent: self.input) }
                     self.showThis = false
                     print("Closing and saving.")
                 }
             )
         }
-        .background(with: .green)
     }
 }
 

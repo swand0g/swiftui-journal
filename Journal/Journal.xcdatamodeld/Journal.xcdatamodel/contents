@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="JournalEntry" representedClassName="JournalEntry" syncable="YES" codeGenerationType="class">
         <attribute name="content" optional="YES" attributeType="String"/>
-        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="journalEntry" inverseEntity="Location"/>
@@ -13,7 +12,7 @@
         <relationship name="journalEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JournalEntry" inverseName="location" inverseEntity="JournalEntry"/>
     </entity>
     <elements>
-        <element name="JournalEntry" positionX="562.6875" positionY="219.18359375" width="128" height="118"/>
+        <element name="JournalEntry" positionX="562.6875" positionY="219.18359375" width="128" height="103"/>
         <element name="Location" positionX="-17.609375" positionY="234.70703125" width="128" height="88"/>
     </elements>
 </model>

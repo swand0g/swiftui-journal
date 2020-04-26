@@ -16,7 +16,7 @@ struct DetailView: View {
 
         VStack {
             if journalEntry.timestamp != nil {
-                Text("\(journalEntry.timestamp!, formatter: dateFormatter)")
+                Text("\(journalEntry.timestamp!, formatter: shortDateFormatter)")
             } else {
                 EmptyView()
             }

@@ -8,7 +8,14 @@
 
 import SwiftUI
 
-public let dateFormatter: DateFormatter = {
+public let shortDateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .short
+    dateFormatter.timeStyle = .none
+    return dateFormatter
+}()
+
+public let mediumDateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .medium
     dateFormatter.timeStyle = .medium
@@ -27,6 +34,12 @@ struct MasterView: View {
     
     @State
     var showJournalEntryCreationView: Bool = false
+    
+    @State
+    var alertIsPresented: Bool = false
+    
+    @State
+    var indexSet: IndexSet = IndexSet()
 
     var body: some View {
         NavigationView {
@@ -34,7 +47,18 @@ struct MasterView: View {
                 ForEach(journalEntries, id: \.self) { entry in
                     JournalEntryListRow(journalEntry: entry)
                 }.onDelete { indices in
-                    self.journalEntries.delete(at: indices, from: self.viewContext)
+                    self.alertIsPresented = true
+                    self.indexSet = indices
+                }.alert(isPresented: $alertIsPresented) {
+                    Alert(
+                        title: Text("Are you sure you want to delete that?"),
+                        message: Text("This can't be undone"),
+                        primaryButton: .destructive(Text("Delete")) {
+                            self.journalEntries.delete(at: self.indexSet, from: self.viewContext)
+                            print("Deleting at: \(self.indexSet)")
+                        },
+                        secondaryButton: .cancel()
+                    )
                 }
             }
             .navigationBarTitle(Text("Journal"))

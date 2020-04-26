@@ -10,11 +10,11 @@ import SwiftUI
 import CoreData
 
 extension JournalEntry: Identifiable {
-    static func create(in managedObjectContext: NSManagedObjectContext, with content: String) {
+    static func create(in managedObjectContext: NSManagedObjectContext, withTitle title: String, withContent content: String) {
         let newJournalEntry = self.init(context: managedObjectContext)
         newJournalEntry.timestamp = Date()
         newJournalEntry.content = content
-        newJournalEntry.title = "An example title"
+        newJournalEntry.title = title
         
         do {
             try  managedObjectContext.save()
