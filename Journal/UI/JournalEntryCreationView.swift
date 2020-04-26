@@ -17,15 +17,14 @@ struct JournalEntryCreationView: View {
     
     @State var title: String = ""
     
-    @Binding
-    var showThis: Bool
+    @Binding var showThis: Bool
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 TextField("Write it down here...", text: $input)
                 Divider()
-                TextField("Add a title?", text: $title)
+                TextField("Add a title, if you'd like", text: $title)
                 Spacer()
             }
             .padding(.horizontal, 15)
