@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14299624242FF3EF00FAA9A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299623242FF3EE00FAA9A8 /* TextView.swift */; };
 		14299626242FF40A00FAA9A8 /* JournalEntryCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299625242FF40A00FAA9A8 /* JournalEntryCreationView.swift */; };
 		1473DA9A23F5F6180039B7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473DA9923F5F6180039B7B4 /* AppDelegate.swift */; };
 		1473DA9D23F5F6180039B7B4 /* Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1473DA9B23F5F6180039B7B4 /* Journal.xcdatamodeld */; };
@@ -44,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14299623242FF3EE00FAA9A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		14299625242FF40A00FAA9A8 /* JournalEntryCreationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryCreationView.swift; sourceTree = "<group>"; };
 		1473DA9623F5F6180039B7B4 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1473DA9923F5F6180039B7B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				14E273AA23F6335600AC8DC3 /* UI */,
 				14E680372454D9F10007F1B9 /* Models */,
 				14E104CF2454DF6500E9D4C8 /* Notifications */,
-				14E680362454D9DB0007F1B9 /* Custom */,
 				1473DAA623F5F6190039B7B4 /* Preview Content */,
 			);
 			path = Journal;
@@ -178,14 +175,6 @@
 				14BF6FD02455071900978A01 /* JournalEntryListRow.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		14E680362454D9DB0007F1B9 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				14299623242FF3EE00FAA9A8 /* TextView.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 		14E680372454D9F10007F1B9 /* Models */ = {
@@ -329,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14299626242FF40A00FAA9A8 /* JournalEntryCreationView.swift in Sources */,
-				14299624242FF3EF00FAA9A8 /* TextView.swift in Sources */,
 				14E104D12454DF7600E9D4C8 /* Notifications.swift in Sources */,
 				1473DAD723F5F9410039B7B4 /* JournalEntry.swift in Sources */,
 				1473DADF23F602770039B7B4 /* DetailView.swift in Sources */,

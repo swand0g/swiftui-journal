@@ -25,9 +25,12 @@ public let mediumDateFormatter: DateFormatter = {
 struct MasterView: View {
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \JournalEntry.timestamp, ascending: true)],
-        animation: .default)
+        entity: JournalEntry.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \JournalEntry.timestamp, ascending: false)]
+    )
     var journalEntries: FetchedResults<JournalEntry>
+    
+    @State var date = Date()
 
     @Environment(\.managedObjectContext)
     var viewContext
@@ -46,6 +49,7 @@ struct MasterView: View {
             List {
                 ForEach(journalEntries, id: \.self) { entry in
                     JournalEntryListRow(journalEntry: entry)
+                    
                 }.onDelete { indices in
                     self.alertIsPresented = true
                     self.indexSet = indices
@@ -77,6 +81,7 @@ struct MasterView: View {
             )
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
     }
+    
 }
 
 struct MasterView_Previews: PreviewProvider {

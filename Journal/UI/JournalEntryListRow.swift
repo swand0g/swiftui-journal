@@ -26,9 +26,10 @@ struct JournalEntryListRow: View {
                         Text("\(journalEntry.title!)")
                         Text("\(journalEntry.timestamp!, formatter: shortDateFormatter)")
                             .font(.caption)
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(Color("dateColor"))
                     } else {
                         Text("\(journalEntry.timestamp!, formatter: mediumDateFormatter)")
+                            .foregroundColor(Color("dateColor"))
                     }
                     
                 }
