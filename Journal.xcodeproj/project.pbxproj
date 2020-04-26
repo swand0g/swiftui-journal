@@ -22,6 +22,7 @@
 		1473DAD923F5F9470039B7B4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473DAD823F5F9470039B7B4 /* Location.swift */; };
 		1473DADD23F602220039B7B4 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473DADC23F602220039B7B4 /* MasterView.swift */; };
 		1473DADF23F602770039B7B4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473DADE23F602770039B7B4 /* DetailView.swift */; };
+		14BF6FD12455071900978A01 /* JournalEntryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF6FD02455071900978A01 /* JournalEntryListRow.swift */; };
 		14E104D12454DF7600E9D4C8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E104D02454DF7600E9D4C8 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		1473DAD823F5F9470039B7B4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1473DADC23F602220039B7B4 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		1473DADE23F602770039B7B4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		14BF6FD02455071900978A01 /* JournalEntryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryListRow.swift; sourceTree = "<group>"; };
 		14E104D02454DF7600E9D4C8 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		14E680382454DBD70007F1B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				1473DADE23F602770039B7B4 /* DetailView.swift */,
 				14299625242FF40A00FAA9A8 /* JournalEntryCreationView.swift */,
 				1473DAA223F5F6180039B7B4 /* SampleContentView.swift */,
+				14BF6FD02455071900978A01 /* JournalEntryListRow.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				1473DAD723F5F9410039B7B4 /* JournalEntry.swift in Sources */,
 				1473DADF23F602770039B7B4 /* DetailView.swift in Sources */,
 				1473DADD23F602220039B7B4 /* MasterView.swift in Sources */,
+				14BF6FD12455071900978A01 /* JournalEntryListRow.swift in Sources */,
 				1473DAA323F5F6180039B7B4 /* SampleContentView.swift in Sources */,
 				1473DA9A23F5F6180039B7B4 /* AppDelegate.swift in Sources */,
 				1473DA9D23F5F6180039B7B4 /* Journal.xcdatamodeld in Sources */,

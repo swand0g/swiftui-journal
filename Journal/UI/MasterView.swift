@@ -32,11 +32,7 @@ struct MasterView: View {
         NavigationView {
             List {
                 ForEach(journalEntries, id: \.self) { entry in
-                    NavigationLink(
-                        destination: DetailView(journalEntry: entry)
-                    ) {
-                        Text("\(entry.timestamp!, formatter: dateFormatter)")
-                    }
+                    JournalEntryListRow(journalEntry: entry)
                 }.onDelete { indices in
                     self.journalEntries.delete(at: indices, from: self.viewContext)
                 }
